@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Riseup::Application.config.secret_key_base = '2339f77546611c8107b8d5be04cb3fa3910bb28390983cf7df40970f6c96409259d6a053f7d2170aebe23179d778d0bd7319d679559a1c3d0ed992b40f492c92'
+Riseup::Application.config.secret_key_base = '34d9ab1ce5ac2eebea4d265d3a88ba83bb58eaeede8d062d7dc652d419ff51aa688bd410c483115a1cac01952c51488b00eac1c778808df81e154c253c041236'
