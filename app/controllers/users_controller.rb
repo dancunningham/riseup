@@ -1,4 +1,5 @@
-class UsersController < ApplicationController
+#class UsersController < ApplicationController
+class UsersController::SessionsController < Devise::SessionsController
   before_filter :authenticate_user!
 
   def index
