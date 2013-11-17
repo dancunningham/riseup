@@ -1,4 +1,5 @@
 Riseup::Application.configure do
+  config.middleware.use Rack::LiveReload
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -25,7 +26,8 @@ Riseup::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = true
+  config.assets.debug = false
+  config.assets.logger = false
 
   config.action_mailer.default_url_options = { :host => 'riseupstories.herokuapp.com' }
 
