@@ -16,6 +16,7 @@ gem 'figaro'
 gem 'pg'
 gem 'rolify'
 gem 'sendgrid'
+gem 'rails_12factor'
 
 group :development do
   gem 'better_errors'
