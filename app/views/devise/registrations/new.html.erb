@@ -1,11 +1,36 @@
 <h2>Sign up</h2>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
-  <%= f.error_notification %>
+<%= custom_form(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-horizontal' }) do |f| %>
   <%= display_base_errors resource %>
-  <%= f.input :name, :autofocus => true %>
-  <%= f.input :email, :required => true %>
-  <%= f.input :password, :required => true %>
-  <%= f.input :password_confirmation, :required => true %>
-  <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
+    <%= f.group do %>
+    <%= f.label :name, class: 'col-sm-2 control-label' %>
+    <div class="col-xs-3">
+      <%= f.text_field :name, :autofocus => true %>
+    </div>
+  <% end %>
+  <%= f.group do %>
+    <%= f.label :email, class: 'col-sm-2 control-label' %>
+    <div class="col-xs-3">
+      <%= f.email_field :email %>
+    </div>
+  <% end %>
+  <%= f.group do %>
+    <%= f.label :password, class: 'col-sm-2 control-label' %>
+    <div class="col-xs-3">
+      <%= f.password_field :password%>
+    </div>
+  <% end %>
+  <%= f.group do %>
+    <%= f.label :password_confirmation, class: 'col-sm-2 control-label' %>
+    <div class="col-xs-3">
+      <%= f.password_field :password_confirmation %>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit 'Sign up' %>
+    </div>
+  </div>
+
 <% end %>
 <%= render "devise/shared/links" %>

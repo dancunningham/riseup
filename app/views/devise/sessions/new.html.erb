@@ -1,8 +1,31 @@
 <h2>Sign in</h2>
-<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
-  <%= f.input :email, :autofocus => true %>
-  <%= f.input :password %>
-  <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
-  <%= f.button :submit, "Sign in", :class => 'btn-primary' %>
+<%= custom_form(resource, :as => resource_name, html: {class: 'form-horizontal'}, :url => session_path(resource_name)) do |f| %>
+  <%= f.group do %>
+    <%= f.label :email, class: 'col-sm-2 control-label' %>
+    <div class="col-xs-3">
+      <%= f.email_field :email, :autofocus => true %>
+    </div>
+  <% end %>
+  <%= f.group do %>
+    <%= f.label :password, class: 'col-sm-2 control-label'  %>
+    <div class="col-xs-3">
+      <%= f.password_field :password %>
+    </div>
+  <% end %>
+  <%- if devise_mapping.rememberable? %>
+    <div class="form-group">
+      <%= f.checkbox do %>
+        <div class="col-xs-3 col-sm-offset-2">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me, 'Remember me' %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit 'Sign in' %>
+    </div>
+  </div>
 <% end %>
 <%= render "devise/shared/links" %>
