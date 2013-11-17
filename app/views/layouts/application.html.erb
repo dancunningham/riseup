@@ -5,9 +5,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "Rise Up" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Riseup" %>">
     <!-- Latest compiled and minified CSS -->
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <%= stylesheet_link_tag "bootstrap.min", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "bootstrap.min", :media => "all" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
