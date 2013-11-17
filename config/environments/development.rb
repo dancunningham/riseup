@@ -31,6 +31,8 @@ Riseup::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'riseupstories.herokuapp.com' }
 
+  config.action_mailer.default_url_options = { :host => 'riseupstories.herokuapp.com' }
+
   config.action_mailer.smtp_settings = {
     address: "smtp.sendgrid.net",
     port: 25,
