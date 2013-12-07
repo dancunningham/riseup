@@ -10,11 +10,36 @@
   </head>
   <body>
     <header>
-      <%= render 'layouts/navigation' %>
+      <%= render 'layouts/navigation' %> 
+      <div class="branding">
+        <div class="container">
+          <div class="col-lg-12 logos">
+            <a href="/" id="logo" class="pull-left"></a>
+            <div class="logo-set pull-right">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/direct_relief_logo.png" alt=""></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/oxfarm_logo.png" alt=""></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>  
+      </div>
+      <div class="backdrop">
+      </div> 
     </header>
-    <div class="container">
+    <div class="container main-container" style="margin-top:96px;">
       <%= render 'layouts/messages' %>
       <%= yield %>
+    <div class="container">
+    <footer>
+      
+        <div class="row"></div>
+      
+    </footer>
     </div>
     <!-- Latest compiled and minified JavaScript -->
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
